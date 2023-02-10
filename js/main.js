@@ -1,4 +1,4 @@
-console.log("ok", Vue);
+// console.log("ok", Vue);
 const app = Vue.createApp({
     data() {
         return {
@@ -30,11 +30,12 @@ const app = Vue.createApp({
                 }
             ]
 
+
         }
 
-    }
+    },
+
 })
 
-console.log(slides);
 
-app.mount("#root");
+app.mount("#app");
