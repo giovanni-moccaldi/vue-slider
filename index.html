@@ -40,7 +40,7 @@
 		<div class="my-carousel-container">
 			<div class="my-carousel">
 				<div class="my-carousel-main" id="slides-container">
-
+					<img :src="slides.image[slides.activeImage]" alt="">
 					<!-- <div class="slide active">
 						<img src="./img/01.webp">
 						<div class="slide-text">
@@ -104,7 +104,9 @@
 				</div>
 
 				<div class="my-carousel-thumbs" id="thumbs-container">
-					<div class="col thumb">
+					<img :src="image" v-for="(image,index) in slides.image" class="thumb"
+						:class="(index==slides.activeImage)?`active`:``" alt="">
+					<!-- <div class="col thumb">
 						<img src="./img/01.webp">
 					</div>
 					<div class="col thumb">
@@ -117,30 +119,30 @@
 						<img src="./img/04.webp">
 					</div>
 					<div class="col thumb">
-						<img src="./img/05.webp">
-					</div>
+						<img src="./img/05.webp"> -->
 				</div>
 			</div>
-
-			<div class="my-carousel-controls">
-
-				<button class="btn btn-outline-dark" id="prev">
-					<i class="fa-solid fa-chevron-left"></i>
-				</button>
-
-				<button class="btn btn-outline-dark" id="inverti-autoplay">
-					<i class="fa-solid fa-repeat"></i>
-				</button>
-
-				<button class="btn btn-outline-dark" id="stop-autoplay">
-					<i class="fa-solid fa-stop"></i>
-				</button>
-
-				<button class="btn btn-outline-dark" id="next">
-					<i class="fa-solid fa-chevron-right"></i>
-				</button>
-			</div>
 		</div>
+
+		<div class="my-carousel-controls">
+
+			<button class="btn btn-outline-dark" id="prev">
+				<i class="fa-solid fa-chevron-left"></i>
+			</button>
+
+			<button class="btn btn-outline-dark" id="inverti-autoplay">
+				<i class="fa-solid fa-repeat"></i>
+			</button>
+
+			<button class="btn btn-outline-dark" id="stop-autoplay">
+				<i class="fa-solid fa-stop"></i>
+			</button>
+
+			<button class="btn btn-outline-dark" id="next">
+				<i class="fa-solid fa-chevron-right"></i>
+			</button>
+		</div>
+	</div>
 
 
 
